@@ -10,11 +10,11 @@ const Workflow = () => {
   const [desc, setDesc] = useState(
     "Powerful shortcuts and a keyboard first workflow means you will get to your finish line in no time!"
   );
+  const [n, setN] = useState("01")
 
   React.useEffect(() => {
     const below = document.querySelectorAll(".some-content")[1];
     const content = document.querySelector(".workflow");
-    const paragraph = document.querySelector(".workflow-inner");
 
     function handleScroll() {
       if (
@@ -47,16 +47,19 @@ const Workflow = () => {
       setDesc(
         "Powerful shortcuts and a keyboard first workflow means you will get to your finish line in no time!"
       );
+      setN("01")
     } else if (frac <= 2 / 3) {
       setHeading("Bullets to visuals in a click");
       setDesc(
         "Transform any block to any other and try different options without any design hassle"
       );
+      setN("02")
     } else {
       setHeading("A powerful assistant just a click away");
       setDesc(
         "Insert blocks, perform powerful actions and leverate the limitless power of AI - all without leaving your keyboard"
       );
+      setN("03")
     }
   }, [frac]);
 
@@ -97,10 +100,10 @@ const Workflow = () => {
             <motion.div
               className="card"
               key={heading}
-              initial={{ y: 150, opacity: 0, scale: 0.5 }}
+              initial={{ y: 150, opacity: 0, scale: 0.7 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{duration:0.5}}
-              exit={{ y: 150, opacity: 0, scale: 0.5 }}
+              transition={{duration:0.4}}
+              exit={{ y: 150, opacity: 0, scale: 0.7 }}
               style={{position: "absolute"}}
             >
               <span className="card-header">{heading}</span>
@@ -110,11 +113,11 @@ const Workflow = () => {
         </div>
 
         <div className="progress">
-          <span>01</span>
+          <span>{n}</span>
           <div className="progress-bar">
             <div className="progress-top"></div>
           </div>
-          <span>01</span>
+          <span>03</span>
         </div>
       </div>
     </div>

@@ -13,7 +13,6 @@ const ScrollText = () => {
   React.useEffect(() => {
     const workflow = document.querySelector(".workflow");
     const description = document.querySelector(".description");
-    const paragraph = document.querySelector(".paragraph");
 
     function handleScroll() {
       if (
@@ -36,7 +35,7 @@ const ScrollText = () => {
 
   return (
     <div className="description">
-      <div className={`paragraph ${fixed==0 ? "top" : (fixed==1?"fixed":"bottom")}`}>
+      <div className={`paragraph ${fixed===0 ? "top" : (fixed===1?"fixed":"bottom")}`}>
         {words.map((word, i) => (
           <span className={`word ${i+1<=Math.round(frac*(words.length))?"scrolled":""}`}>{word}</span>
         ))}

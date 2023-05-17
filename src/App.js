@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ScrollText from "./components/ScrollText";
 import Workflow from "./components/Workflow";
 import "./App.css";
