@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import ScrollText from "./components/ScrollText";
+import Workflow from "./components/Workflow";
+import "./App.css";
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <div className="some-content">
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+      </div>
+      <div className="line"></div>
+      <div className="container" onScroll={console.log(1)}>
+        <ScrollText />
+      </div>
+      <div className="line"></div>
+      <div className="container">
+        <Workflow />
+      </div>
+      <div className="line"></div>
+      <div className="some-content">
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+        <h1>Some content</h1>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

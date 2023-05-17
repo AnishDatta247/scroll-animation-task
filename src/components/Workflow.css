@@ -1,0 +1,130 @@
+.workflow{
+    height: 600vh;
+    position: relative;
+    /* width: 100vw; */
+}
+
+.workflow-inner{    
+    padding: 0 8rem;
+    height: 100vh;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 9fr 8fr 2fr;
+}
+
+.workflow-inner.top{
+    position: static;
+}
+
+.workflow-inner.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 8rem;
+}
+
+.workflow-inner.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.workflow-col-left{
+    /* width: calc(50vw - 2rem); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.workflow-title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #a594fd;
+}
+
+.workflow-header{
+    font-size: 8vmin;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: 15px;
+    width: 350px;
+}
+
+.workflow-desc{
+    color: #b6b6b6;
+    width: 350px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.workflow-col-right{
+    /* width: calc(50vw - 2rem); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.workflow-col-left, .workflow-col-right{
+
+}
+
+.card{
+    background-color: #101111;
+    border-radius: 20px;
+    /* margin-right: 4rem; */
+}
+
+.progress{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.progress span{
+    color: #6d6d6d;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.progress-bar{
+    height: 400px;
+    width: 5px;
+    background-color: #101111;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.progress-top{
+    height: 0;
+    z-index: 10;
+    width: 5px;
+    background-color: #a595fc;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-header{
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card-desc{
+    color: #6d6d6d;
+    font-weight: 500;
+}
